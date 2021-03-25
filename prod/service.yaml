@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: inrad-api
+  labels:
+    app: inrad-api
+spec:
+  ports:
+    - port: 80
+      targetPort: 8000
+      protocol: TCP
+  selector:
+    app: inrad-api
+    tier: backend
